@@ -113,7 +113,6 @@ def chat() :
             if tg["tag"]==tag :
                 responses=tg["responses"]
                 print(random.choice(responses))
-                
 
 @main.after_request
 def after_request(response):
@@ -123,7 +122,7 @@ def after_request(response):
     header['Access-Control-Allow-Methods'] = 'OPTIONS, HEAD, GET, POST, DELETE, PUT'
     return response
 
-@main.route("/chat/<string:inp>", methods=['GET'])
+@main.route("/healthBot/<string:inp>", methods=['GET'])
 def chatDef(inp):
     print("Start talking with the bot , type quit to stop the chatbot")
     while True :
